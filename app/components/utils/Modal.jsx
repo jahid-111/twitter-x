@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiOutlineXMark } from "react-icons/hi2";
 
-const Modal = ({ children, modalClassName, modalTitle }) => {
+const Modal = ({ children, modalTitle }) => {
   const router = useRouter();
 
   const modalRef = useRef(null);
@@ -41,14 +41,14 @@ const Modal = ({ children, modalClassName, modalTitle }) => {
   if (!mounted) return null;
 
   return createPortal(
-    <div className={`${modalClassName}`}>
+    <div>
       <dialog
         ref={modalRef}
         onClose={onHide}
         aria-modal="true"
         className="fixed inset-0 flex items-center justify-center h-full w-full bg-gray-800 bg-opacity-50"
       >
-        <div className="h-auto w-full sm:w-9/12 md:w-6/12 xl:w-5/12 bg-black text-gray-200 p-2 rounded-lg shadow-lg">
+        <div className="h-auto w-auto shadow-gray-800 bg-black text-gray-200 p-2 rounded-lg shadow-xl">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold">{modalTitle}</h3>
             <button
