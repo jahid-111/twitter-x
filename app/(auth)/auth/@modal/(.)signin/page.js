@@ -7,7 +7,7 @@ import Modal from "@/app/components/utils/Modal";
 const SigninPage = () => {
   return (
     <>
-      <Modal modalClassName={`w-6/12 bg-red-500`}>
+      <Modal>
         <div className="flex flex-col justify-center items-center p-5">
           {/* Logo Section */}
           <div className="w-full md:w-9/12 px-10">

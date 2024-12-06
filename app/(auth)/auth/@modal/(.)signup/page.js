@@ -20,9 +20,9 @@ const SignupPage = () => {
 
         {/* Link Section */}
         <div className="mt-4">
-          No Account ?{" "}
+          Already have an account ?{" "}
           <Link href="/auth/signin" className="text-blue-500 hover:underline">
-            Create Account
+            Login
           </Link>
         </div>
       </div>

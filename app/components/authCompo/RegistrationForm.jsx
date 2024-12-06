@@ -49,7 +49,7 @@ function SignupForm() {
   };
 
   return (
-    <div className="">
+    <div>
       <h2 className="text-3xl font-bold text-start ">Create your account</h2>
       <form onSubmit={handleSubmit} className=" relative">
         {/* Name */}
