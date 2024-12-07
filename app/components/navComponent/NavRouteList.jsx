@@ -10,7 +10,7 @@ const NavRouteList = () => {
           <Link
             prefetch={false}
             href={item.label === "Profile" ? `/` : item.href}
-            className=" hover:bg-gray-900  xl:w-[13rem] rounded-full flex gap-2 items-center "
+            className=" hover:bg-gray-900 xl:w-[13rem] rounded-full flex gap-2 items-center "
           >
             <item.icon className=" h-12 w-12 p-2 rounded-full " />
             <span className="hidden xl:block text-xl">{item.label}</span>

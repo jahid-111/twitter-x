@@ -24,12 +24,15 @@ export const navItems = [
 
 export const actionItems = [
   { icon: FaRegComments, name: "comments" },
-  { icon: BiRepost, name: "repost" },
   { icon: FaRegHeart, name: "like" },
+  { icon: BiRepost, name: "repost" },
   { icon: IoStatsChart, name: "chart" },
 ];
 
-export const sideActionItems = [{ icon: FiBookmark }, { icon: LuShare }];
+export const sideActionItems = [
+  { icon: FiBookmark, name: "bookmark" },
+  { icon: LuShare, name: "share" },
+];
 
 export const footerItems = [
   "About",

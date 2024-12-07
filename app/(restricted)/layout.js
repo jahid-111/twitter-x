@@ -26,18 +26,18 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex gap-4 flex-col sm:flex-row lg:flex-row lg:items-start items-center justify-center mx-auto w-full max-w-7xl  md:px-24 lg:px-4 ">
-          <nav className=" w-full sm:w-2/12">
+          <nav className="bg-opacity-90 bg-gray-950 sm:bg-transparent sm:bg-opacity-100 w-full fixed bottom-0 left-0 right-0 sm:h-screen sm:sticky sm:top-0 sm:w-[100px] xl:w-[350px]">
             <NavRouteList />
           </nav>
 
-          <section className="flex gap-2 flex-col lg:flex-row w-full ">
-            <main className="w-full border-r border-l border-gray-700 lg:w-[61%] ">
+          <main className="flex gap-2 flex-col lg:flex-row w-full ">
+            <section className="w-full border-r border-l border-gray-700 lg:w-[61%] ">
               {children}
-            </main>
-            <section className=" hidden lg:block w-full lg:w-[39%] px-4">
-              <Sidebar />
             </section>
-          </section>
+            <aside className=" hidden lg:block w-full lg:w-[39%] px-4">
+              <Sidebar />
+            </aside>
+          </main>
         </div>
       </body>
     </html>

@@ -1,10 +1,17 @@
 import React from "react";
+import ToggleTop from "../components/navComponent/ToggleTop";
+import PostTweet from "../components/statusCompo/PostTweet";
+import FeedCard from "../components/statusCompo/FeedCard";
 
 const HomePage = () => {
   return (
-    <div>
-      <p>Home Page</p>
-    </div>
+    <>
+      <ToggleTop />
+      <PostTweet />
+      <FeedCard />
+      <FeedCard />
+      <FeedCard />
+    </>
   );
 };
 
