@@ -1,18 +1,8 @@
 import React from "react";
-import ToggleTop from "../components/navComponent/ToggleTop";
-import PostTweet from "../components/statusCompo/PostTweet";
-import FeedCard from "../components/statusCompo/FeedCard";
+import Home from "../components/(pages)/home/MainPage";
 
 const HomePage = () => {
-  return (
-    <>
-      <ToggleTop />
-      <PostTweet />
-      <FeedCard />
-      <FeedCard />
-      <FeedCard />
-    </>
-  );
+  return <Home />;
 };
 
 export default HomePage;

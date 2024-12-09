@@ -6,13 +6,14 @@ import { FaReply } from "react-icons/fa";
 const ToggleTop = () => {
   // console.log(id);
   // Configuration for routes and their respective buttons
+  // need pass id some specific route
   const id = "/pass-id-from-data";
   const routeButtonConfig = {
     "/": ["For You", "Following"],
     "/explore": ["For you", "Trending", "News", "Sports", "Entertainment"],
     "/notification": ["All", "Verified", "Mentions"],
     [`/status/${id}`]: ["🔙 Posts", <FaReply key={id} />],
-    [`/profile/${id}`]: [
+    [`/profile`]: [
       "Posts",
       "Replies",
       "Highlights",
@@ -48,7 +49,7 @@ const ToggleTop = () => {
       className={` h-auto md:h-12 sticky top-0 w-full border-b flex-wrap   border-gray-600 flex items-center transition-all duration-300 ${
         isScrolled
           ? "bg-gray-900 bg-opacity-80 backdrop-blur-sm"
-          : "bg-transparent"
+          : "bg-transparent  backdrop-blur-sm"
       }`}
     >
       {/* Render additional buttons dynamically */}

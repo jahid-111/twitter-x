@@ -13,8 +13,11 @@ const MarkShare = () => {
       {sideActionItems.map((item, i) => (
         <ul key={i}>
           <li>
-            <button onClick={() => handleMarkShareBy(item.name)}>
-              <item.icon className="h-9 w-9 px-2 cursor-pointer hover:rounded-full hover:border  hover:border-green-400 hover:bg-gray-700 hover:text-green-200" />
+            <button
+              onClick={() => handleMarkShareBy(item.name)}
+              className="flex items-center justify-center h-9 w-9 rounded-full hover:border hover:border-green-400 hover:bg-gray-700 hover:text-green-200"
+            >
+              <item.icon />
             </button>
           </li>
         </ul>
