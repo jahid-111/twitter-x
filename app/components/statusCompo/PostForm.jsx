@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import UploadContextIcon from "./UploadContextIcon";
 
 const PostForm = ({ userId }) => {
   const [buttonEnabled, setButtonEnabled] = useState(false);
@@ -34,7 +35,7 @@ const PostForm = ({ userId }) => {
   //   };
 
   return (
-    <form className="w-11/12">
+    <form className="w-11/12  ">
       {/* Content Section */}
       <div>
         <input
@@ -59,13 +60,10 @@ const PostForm = ({ userId }) => {
         </div>
       </div>
 
-      {/* POST TWEET Button */}
-      <div className="flex flex-col items-center w-2/12 mt-2">
-        {error && (
-          <span className="text-red-500 text-sm mb-2" role="alert">
-            {error}
-          </span>
-        )}
+      <div className=" flex justify-between items-center mt-2">
+        <UploadContextIcon />
+
+        {/* POST TWEET Button */}
         <button
           disabled={!buttonEnabled || loading}
           type="submit"

@@ -4,13 +4,27 @@ import {
   IoMail,
   IoStatsChart,
 } from "react-icons/io5";
-import { FaImage, FaRegComments, FaRegHeart, FaSearch } from "react-icons/fa";
+import {
+  FaImage,
+  FaPoll,
+  FaRegComments,
+  FaRegHeart,
+  FaSearch,
+} from "react-icons/fa";
 import { RiBookmarkFill, RiCalendarScheduleLine } from "react-icons/ri";
-import { MdOutlineGifBox, MdPerson, MdSettings } from "react-icons/md";
+import {
+  MdEmojiEmotions,
+  MdOutlineGifBox,
+  MdPerson,
+  MdSettings,
+} from "react-icons/md";
 import { BiPoll, BiRepost } from "react-icons/bi";
 import { LuShare } from "react-icons/lu";
 import { FiBookmark } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci";
+import { FaGift, FaLocationArrow } from "react-icons/fa6";
+
+// ================================^^^^^^^^^^^^^^^^^^^ Modules Exports
 
 export const navItems = [
   { icon: IoHomeSharp, label: "Home", href: "/" },
@@ -55,12 +69,12 @@ export const footerItems = [
 ];
 
 export const postActionItems = [
-  { icon: FaImage },
-  { icon: MdOutlineGifBox },
-  { icon: BiPoll },
-  { icon: RiCalendarScheduleLine },
-  { icon: FaImage },
-  { icon: CiLocationOn },
+  { icon: FaImage, actionName: "uploadImage" },
+  { icon: MdOutlineGifBox, actionName: "gif" },
+  { icon: BiPoll, actionName: "poll" },
+  { icon: MdEmojiEmotions, actionName: "feeling" },
+  { icon: RiCalendarScheduleLine, actionName: "schedulePost" },
+  { icon: CiLocationOn, actionName: "location" },
 ];
 
 export const monthsForSignup = [
