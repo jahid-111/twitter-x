@@ -2,7 +2,7 @@
 
 import React from "react";
 import Subscription from "./Subscription";
-import SearchBar from "./Searchbar";
+import SearchBar from "./SearchBar";
 import TrendingCard from "./Trending";
 import { usePathname } from "next/navigation";
 import FollowCard from "./FollowCard";
