@@ -11,7 +11,7 @@ const NavRouteList = () => {
       {/* Logo Section */}
       <div className="hidden sm:block">
         <div className="xl:w-[13rem] h-auto rounded-full flex gap-2 items-center my-2">
-          <Link href="/" className="hover:bg-gray-900 p-2 rounded-full">
+          <Link href="/" className="hover:bg-toggle p-2 rounded-full">
             <XlogoSvg xClass="w-9 h-9" />
           </Link>
         </div>
@@ -26,7 +26,7 @@ const NavRouteList = () => {
             prefetch={false}
             aria-label={item.label}
             href={item.label === "Profile" ? "/profile" : item.href}
-            className="hover:bg-gray-900 xl:w-[13rem] rounded-full flex gap-2 items-center"
+            className="hover:bg-toggle xl:w-[13rem] rounded-full flex gap-2 items-center"
           >
             <item.icon className="h-11 w-11 p-2 rounded-full" />
             <span className="hidden xl:block text-xl">{item.label}</span>
@@ -37,7 +37,7 @@ const NavRouteList = () => {
       {/* Post Button :: render on device */}
       <div className="absolute right-5 bottom-40">
         <div className="hidden xl:block">
-          <button className="bg-green-50 py-4 px-24 text-gray-800 text-sm font-semibold rounded-full">
+          <button className="bg-gray-200 hover:bg-gray-300  py-4 px-24 text-gray-800 text-sm font-semibold rounded-full">
             POST
           </button>
         </div>

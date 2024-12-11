@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 const UserShortDetails = () => {
+  //on click action from Parent Link : /profile/id
   return (
     <div className=" w-52 h-auto">
       <div className="flex justify-between items-center">
@@ -16,7 +17,7 @@ const UserShortDetails = () => {
           />
         </div>
         {/* Follow Button */}
-        <button className="bg-white text-gray-900 font-medium rounded-full px-5  hover:bg-red-500">
+        <button className="bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium rounded-full px-5 ">
           Follow
         </button>
       </div>
@@ -28,10 +29,10 @@ const UserShortDetails = () => {
       </div>
 
       {/* Bio */}
-      <p className="text-center text-gray-300 mb-4">Im a developer</p>
+      <p className="text-start text-gray-300 my-2">Im a developer</p>
 
       {/* Follower Count */}
-      <div className="flex justify-around items-center">
+      <div className="flex justify-between items-center py-1">
         <p className="text-sm">99 Followers</p>
         <p className="text-sm">44 Following</p>
       </div>

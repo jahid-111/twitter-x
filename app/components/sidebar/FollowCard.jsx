@@ -28,7 +28,7 @@ const FollowCard = () => {
         <Link
           key={index}
           href="/profile"
-          className="flex cursor-pointer justify-between p-3 items-center hover:bg-gray-800 h-16 w-full"
+          className="flex cursor-pointer justify-between p-3 items-center hover:bg-linkColor h-16 w-full"
         >
           <div className="flex gap-3 items-center">
             <div className="w-12 h-12 rounded-full flex items-center justify-center text-white">
@@ -40,12 +40,10 @@ const FollowCard = () => {
               onMouseLeave={() => setHoveredIndex(null)}
               className="flex flex-col relative"
             >
-              <p className="font-medium text-xl hover:text-red-500">
-                {user.name}
-              </p>
+              <p className="font-medium text-xl hover:underline">{user.name}</p>
               <p className="text-sm text-gray-400">{user.title}</p>
               {isHoveredIndex === index && (
-                <div className="absolute top-8 right-28 z-10 bg-gray-800 p-3 rounded-lg shadow-custom">
+                <div className="absolute top-8 right-28 z-10 bg-gray-900 p-3 rounded-lg shadow-custom">
                   <UserShortDetails />
                 </div>
               )}
@@ -53,7 +51,7 @@ const FollowCard = () => {
           </div>
           <button
             onClick={handleUserFollow}
-            className="bg-white text-gray-900 font-medium rounded-full px-5 py-1 hover:bg-primary"
+            className="bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium rounded-full px-5 py-1"
           >
             Follow
           </button>

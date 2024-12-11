@@ -6,7 +6,7 @@ const NotifyMessage = () => {
   return (
     <Link
       href="/go"
-      className="flex gap-3 items-center hover:bg-gray-800 px-2 py-3 border-b border-gray-700"
+      className="flex gap-3 items-center hover:bg-linkColor px-2 py-3 border-b border-gray-700"
     >
       <Image
         src="/hardImg/image.png"

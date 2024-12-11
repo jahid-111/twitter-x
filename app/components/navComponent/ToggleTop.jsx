@@ -56,10 +56,10 @@ const ToggleTop = () => {
       {buttons.map((buttonText) => (
         <div
           key={buttonText}
-          className=" flex hover:border-b-4 hover:border-[#1DA1F2] justify-center items-center mx-auto  "
+          className=" flex hover:border-b-[3px] hover:text-tertiaryDark border-primary justify-center items-center mx-auto  "
         >
           <button
-            className="px-5 mt-1 md:mt-0 md:py-2 mx-auto"
+            className="px-5 mt-1 md:mt-0 md:py-2 mx-auto "
             key={buttonText}
           >
             {buttonText}

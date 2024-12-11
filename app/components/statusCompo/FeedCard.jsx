@@ -9,7 +9,7 @@ import ReactionButton from "../navComponent/ReactionList";
 
 const FeedCard = () => {
   return (
-    <div className=" hover:bg-black cursor-pointer flex gap-2 w-full p-1  border-b border-gray-600">
+    <div className=" hover:bg-linkColor cursor-pointer flex gap-2 w-full p-1  border-b border-gray-600">
       <div className=" w-1/12">
         <ImageSmall />
       </div>

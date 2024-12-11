@@ -44,7 +44,7 @@ const PostForm = ({ userId }) => {
           id="content"
           autoComplete="off"
           onChange={handleInputChange}
-          className="w-full text-[1.2rem] text-gray-200 font-medium bg-transparent placeholder:text-gray-400 outline-none"
+          className="w-full text-[1.2rem] text-quinaryDark font-medium bg-transparent placeholder:text-gray-400 outline-none"
           placeholder="What's Happening?!"
           aria-label="Post Content"
         />
@@ -52,7 +52,7 @@ const PostForm = ({ userId }) => {
         <div className="w-full py-3 border-b border-gray-600">
           <button
             type="button"
-            className="text-[#1DA1F2] hover:bg-slate-800 font-semibold px-2 text-[0.9rem] rounded-full"
+            className="text-primary hover:bg-slate-800 font-semibold px-2 text-[0.9rem] rounded-full"
             aria-label="Set Reply Permission"
           >
             Everyone Can Reply

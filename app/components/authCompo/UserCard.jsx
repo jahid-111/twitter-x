@@ -3,7 +3,7 @@ import React from "react";
 
 const UserCard = () => {
   return (
-    <div className=" my-auto flex gap-5 justify-start items-center">
+    <div className=" cursor-pointer rounded-full px-3 py-2 hover:bg-toggle my-auto flex gap-5 justify-start items-center">
       {/* User Image */}
       <Image
         src="/hardImg/image.png"

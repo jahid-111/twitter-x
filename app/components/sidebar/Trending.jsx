@@ -8,7 +8,7 @@ const TrendingCard = () => {
 
       {[...Array(3)].map((_, index) => (
         <Link key={index} href="/">
-          <div className="px-3 py-2 flex flex-col gap-1 hover:bg-gray-900 transition">
+          <div className="px-3 py-2 flex flex-col gap-1 hover:bg-linkColor transition">
             <h5 className="text-sm text-gray-500">Trending in World IT</h5>
             <strong className=" ms-4">#Development</strong>
             <p className=" text-gray-500">333 posts</p>
