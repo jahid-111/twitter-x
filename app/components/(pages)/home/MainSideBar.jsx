@@ -8,7 +8,7 @@ import Link from "next/link";
 const MainSideBar = () => {
   return (
     <div className=" sticky -top-36  ">
-      <div className="sticky top-0 left-0 right-0  mb-4 w-full z-10">
+      <div className="sticky top-1 left-0 right-0  mb-4 w-full z-10">
         <SearchBar />
       </div>
       <Subscription />

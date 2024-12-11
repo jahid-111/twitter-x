@@ -1,6 +1,7 @@
 import React from "react";
 import NotificationSidBar from "./NotificationSidBar";
 import ToggleTop from "../../navComponent/ToggleTop";
+import NotifyMessage from "./NotifyMessage";
 
 const Notification = () => {
   return (
@@ -11,6 +12,11 @@ const Notification = () => {
         </div>
         <div className=" sticky top-9 w-full">
           <ToggleTop />
+          <div className=" flex flex-col">
+            <NotifyMessage />
+            <NotifyMessage />
+            <NotifyMessage />
+          </div>
         </div>
       </section>
       <NotificationSidBar />

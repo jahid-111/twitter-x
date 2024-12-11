@@ -1,68 +1,64 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import ImageSmall from "../statusCompo/ImageSmall";
+import UserShortDetails from "../authCompo/UserShortDetails";
 
 const FollowCard = () => {
+  const [isHoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleUserFollow = (e) => {
+    e.preventDefault();
+    window.alert("Followed");
+  };
+
+  const users = [
+    { name: "Name1", title: "Title1: @HelloWorld1" },
+    { name: "Name2", title: "Title2: @HelloWorld2" },
+    { name: "Name2", title: "Title2: @HelloWorld3" },
+  ];
+
+  // console.log(isHoveredIndex);
   return (
-    <div className="border  pt-2 border-gray-700 rounded-lg w-auto ">
+    <div className="border pt-2 border-gray-700 rounded-lg w-auto">
       <h3 className="text-xl font-semibold mb-2 px-3">Who to follow</h3>
 
-      <div className="flex cursor-pointer justify-between p-3 items-center hover:bg-gray-800 h-16 w-full">
-        <div className="flex gap-3 items-center">
-          {/* Image  */}
-          <div className="bg-red-700 w-12 h-12 rounded-full flex items-center justify-center text-white">
-            Img
+      {users.map((user, index) => (
+        <Link
+          key={index}
+          href="/profile"
+          className="flex cursor-pointer justify-between p-3 items-center hover:bg-gray-800 h-16 w-full"
+        >
+          <div className="flex gap-3 items-center">
+            <div className="w-12 h-12 rounded-full flex items-center justify-center text-white">
+              <ImageSmall />
+            </div>
+            {/* onMouse Enter User Short Details */}
+            <div
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className="flex flex-col relative"
+            >
+              <p className="font-medium text-xl hover:text-red-500">
+                {user.name}
+              </p>
+              <p className="text-sm text-gray-400">{user.title}</p>
+              {isHoveredIndex === index && (
+                <div className="absolute top-8 right-28 z-10 bg-gray-800 p-3 rounded-lg shadow-custom">
+                  <UserShortDetails />
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex flex-col">
-            <Link href="/pageName" className="font-medium text-xl">
-              Name
-            </Link>
-            <Link href="/pageName" className="text-sm text-gray-400">
-              Title: @Hello World
-            </Link>
-          </div>
-        </div>
-        <button className="bg-white text-gray-900 font-medium rounded-full px-5 py-1">
-          Follow
-        </button>
-      </div>
-      <div className="flex cursor-pointer justify-between p-3 items-center hover:bg-gray-800 h-16 w-full">
-        <div className="flex gap-3 items-center">
-          {/* Image  */}
-          <div className="bg-red-700 w-12 h-12 rounded-full flex items-center justify-center text-white">
-            Img
-          </div>
-          <div className="flex flex-col">
-            <Link href="/pageName" className="font-medium text-xl">
-              Name
-            </Link>
-            <Link href="/pageName" className="text-sm text-gray-400">
-              Title: @Hello World
-            </Link>
-          </div>
-        </div>
-        <button className="bg-white text-gray-900 font-medium rounded-full px-5 py-1">
-          Follow
-        </button>
-      </div>
-      <div className="flex cursor-pointer justify-between p-3 items-center hover:bg-gray-800 h-16 w-full">
-        <div className="flex gap-3 items-center">
-          {/* Image  */}
-          <div className="bg-red-700 w-12 h-12 rounded-full flex items-center justify-center text-white">
-            Img
-          </div>
-          <div className="flex flex-col">
-            <Link href="/pageName" className="font-medium text-xl">
-              Name
-            </Link>
-            <Link href="/pageName" className="text-sm text-gray-400">
-              Title: @Hello World
-            </Link>
-          </div>
-        </div>
-        <button className="bg-white text-gray-900 font-medium rounded-full px-5 py-1">
-          Follow
-        </button>
-      </div>
+          <button
+            onClick={handleUserFollow}
+            className="bg-white text-gray-900 font-medium rounded-full px-5 py-1 hover:bg-primary"
+          >
+            Follow
+          </button>
+        </Link>
+      ))}
     </div>
   );
 };
