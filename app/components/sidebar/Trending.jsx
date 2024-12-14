@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-const TrendingCard = () => {
+const TrendingCard = ({ classCustom }) => {
   return (
-    <div className="border  border-gray-700 text-sm rounded-lg flex flex-col overflow-hidden gap-1 w-auto">
+    <div className={`${classCustom}`}>
       <p className="my-2 px-3 text-2xl font-semibold">What’s happening!</p>
 
       {[...Array(3)].map((_, index) => (

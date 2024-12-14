@@ -2,10 +2,23 @@
 
 import { actionItems } from "@/data/navigationData";
 import React from "react";
+import { useRouter } from "next/navigation"; // For client-side navigation
 
 const ReactionButton = () => {
+  const router = useRouter();
+
   function handleReactionBy(name) {
     console.log(name);
+
+    if (name === "comments") {
+      router.push("/compose/comment-reply");
+    } else if (name === "like") {
+      window.alert("liked");
+    } else if (name === "repost") {
+      window.prompt("are u sure ??");
+    } else if (name == "chart") {
+      window.alert("Oops....!! ");
+    }
   }
 
   return (

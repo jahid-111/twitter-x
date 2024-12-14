@@ -1,10 +1,17 @@
 "use client";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaReply } from "react-icons/fa";
+import ToggleContext from "../../context/ToggleContext";
+import useToggleLoad from "@/app/hooks/useToggleLoad";
 
 const ToggleTop = () => {
-  // console.log(id);
+  // const context = useContext(ToggleContext);
+  const { load, setLoad } = useToggleLoad();
+
+  // console.log("PASS VALUE :   ", load);
+  // console.log("PASS VALUE :   ", setLoad);
+
   // Configuration for routes and their respective buttons
   // need pass id some specific route
   const id = "/pass-id-from-data";
@@ -43,6 +50,15 @@ const ToggleTop = () => {
 
   const buttons = routeButtonConfig[pathName] || [];
   // console.log(buttons);
+  if (!load) {
+    setLoad("For You");
+  }
+  function handleToggleButtonToPathRoute(name) {
+    // console.log(name);
+    setLoad(name);
+
+    // setLoad(name); //UP  next for modify 🔴🔴
+  }
 
   return (
     <div
@@ -59,6 +75,7 @@ const ToggleTop = () => {
           className=" flex hover:border-b-[3px] hover:text-tertiaryDark border-primary justify-center items-center mx-auto  "
         >
           <button
+            onClick={() => handleToggleButtonToPathRoute(buttonText)}
             className="px-5 mt-1 md:mt-0 md:py-2 mx-auto "
             key={buttonText}
           >

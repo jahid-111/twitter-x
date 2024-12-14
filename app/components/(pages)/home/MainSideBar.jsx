@@ -13,7 +13,11 @@ const MainSideBar = () => {
       </div>
       <Subscription />
       <div className="mt-10 space-y-4">
-        <TrendingCard />
+        <TrendingCard
+          classCustom={
+            "border border-gray-700 text-sm rounded-lg flex flex-col overflow-hidden gap-1 w-auto"
+          }
+        />
         <FollowCard />
 
         {/* Developer Info */}

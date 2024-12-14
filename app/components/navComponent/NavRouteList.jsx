@@ -37,14 +37,17 @@ const NavRouteList = () => {
       {/* Post Button :: render on device */}
       <div className="absolute right-5 bottom-40">
         <div className="hidden xl:block">
-          <button className="bg-gray-200 hover:bg-gray-300  py-4 px-24 text-gray-800 text-sm font-semibold rounded-full">
+          <Link
+            href="/compose/tweet-post"
+            className="bg-gray-200 hover:bg-gray-300  py-4 px-24 text-gray-800 text-sm font-semibold rounded-full"
+          >
             POST
-          </button>
+          </Link>
         </div>
         <div className="xl:hidden">
-          <button>
+          <Link href="/compose/tweet-post">
             <TweetIcon />
-          </button>
+          </Link>
         </div>
       </div>
 
